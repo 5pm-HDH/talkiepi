@@ -3,9 +3,9 @@ package talkiepi
 import (
 	"crypto/tls"
 
+	"github.com/5pm-HDH/gumble/gumble"
+	"github.com/5pm-HDH/gumble/gumbleopenal"
 	"github.com/dchote/gpio"
-	"github.com/dchote/gumble/gumble"
-	"github.com/dchote/gumble/gumbleopenal"
 )
 
 // Raspberry Pi GPIO pin assignments (CPU pin definitions)
