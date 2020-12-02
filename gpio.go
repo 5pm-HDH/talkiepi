@@ -18,8 +18,7 @@ func (b *Talkiepi) initGPIO() {
 		b.GPIOEnabled = true
 	}
 
-	ButtonPinPullUp := rpio.Pin(ButtonPin)
-	ButtonPinPullUp.PullUp()
+
 
 	rpio.Close()
 
@@ -33,7 +32,7 @@ func (b *Talkiepi) initGPIO() {
 				b.ButtonState = currentState
 
 				if b.Stream != nil {
-					if b.ButtonState == 1 {
+					if b.ButtonState == 0 {
 						fmt.Printf("Button is released\n")
 						b.TransmitStop()
 					} else {
